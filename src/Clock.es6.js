@@ -27,6 +27,8 @@ class Clock extends Component {
         const minutes = Math.floor((time/1000/60)%60);
         const hours = Math.floor(time/(1000*60*60) % 24);
         const days = Math.floor(time/(1000*60*60*24));
+        // this line does the same thing as the one below, it's shorthand for instances where the key and value have the same name
+        // this.setState(days, hours, minutes, seconds)
         this.setState({days: days, hours: hours, minutes: minutes, seconds: seconds});
     }
 
