@@ -42,3 +42,7 @@ class Clock extends Component {
     }
 }
 export default Clock;
+
+// Components have different methods you can run at different points of the lifecyle of a Component
+// ComponentDidMount is called when the component is constructed
+// COmponentDidUpdate takes the previous props, the previous state and snapshot as arguments. 
