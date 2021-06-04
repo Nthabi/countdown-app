@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import Clock from './Clock.es6';
+
 
 class App extends Component {
     // constructor allows us to have local state in our class
     constructor(props){
+        // props pass down data from parent to child components to update the state in the child component
         super(props);
         this.state = {
             deadline: 'December 25, 2021',
@@ -17,6 +20,7 @@ class App extends Component {
         return (
             <div>
                 <h5>Countdown to {this.state.deadline}</h5>
+                <Clock deadline={this.state.deadline}/>
                 <input placeholder='New date' onChange={e => this.setState({newDeadline: e.target.value})}/>
                 <button onClick={() => this.updateDeadline()}>Update</button>
             </div>
